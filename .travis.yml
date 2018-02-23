@@ -4,7 +4,7 @@ cache: yarn
 php:
   - "7.2"
 before_install:
-  - git clone https://github.com/CodeDesignInitiative/cdweb1801 codedesign
+  - git clone https://github.com/minthemiddle/cdweb1801 codedesign
   - cd codedesign
   - sudo apt-get update; sudo apt-get install apt-utils gnupg2 -y
   - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
@@ -14,5 +14,5 @@ before_install:
   - npm i -g yarn gulp netlify-cli; yarn; gulp --e=production
   - cp _redirects build_production/_redirects
 
-script:
-  - netlify -t $NETLIFY_TOKEN deploy --site-id sharp-goldstine-eda64e -p build_production
+# script:
+#   - netlify -t $NETLIFY_TOKEN deploy --site-id sharp-goldstine-eda64e -p build_production
