@@ -1,21 +1,17 @@
-sudo: required
 language: php
 php:
   - "7.2"
-before_install:
-  - git clone https://github.com/CodeDesignInitiative/cdweb1801 codedesign
-  - cd codedesign
-  - sudo apt-get update; sudo apt-get install apt-utils gnupg2 -y
-  - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - php -r "readfile('https://getcomposer.org/installer');" | php
-  - php composer.phar install
-  - yarn global add gulp netlify-cli; yarn; gulp --e=production
-  - cp _redirects build_production/_redirects
 cache:
   directories:
     - $HOME/.cache/yarn
     - $HOME/.composer/cache/files
+before_install:
+  - git clone https://github.com/CodeDesignInitiative/cdweb1801 codedesign
+  - cd codedesign
+  - composer install
+  - yarn global add netlify-cli; yarn; gulp --e=production
+  - cp _redirects build_production/_redirects
+
 
 # script:
 #   - netlify -t $NETLIFY_TOKEN deploy --site-id sharp-goldstine-eda64e -p build_production
