@@ -9,7 +9,7 @@ before_install:
   - git clone https://github.com/CodeDesignInitiative/cdweb1801 codedesign
   - cd codedesign
   - composer install
-  - yarn global add netlify-cli; yarn; gulp --e=production
+  - npm -i -g netlify-cli; npm install; gulp --e=production
   - cp _redirects build_production/_redirects
 
 
