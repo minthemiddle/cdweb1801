@@ -49,6 +49,21 @@
         {{ $page->days }}
         @endslot
 
+        @slot('meals')
+        {{ $page->meals }}
+        @endslot
+
+        @slot('cost')
+        {{ $page->cost }}
+        @endslot
+
+        @slot('costlaptop')
+        {{ $page->costlaptop }}
+        @endslot
+
+        @slot('locationlink')
+        {{ $page->locationlink }}
+        @endslot
 
     @endcomponent
 
