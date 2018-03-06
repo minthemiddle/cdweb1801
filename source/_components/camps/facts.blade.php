@@ -18,7 +18,7 @@
         @endif
         <dt class="font-bold">Unkostenbeitrag</dt>
         <dd class="mb-4">
-            {{ $cost }} €
+            {{ $cost }}
         </dd>
         <dt class="font-bold">Inklusive Versorgung</dt>
         <dd class="mb-4">Jeden Tag {{ $meals }}</dd>
