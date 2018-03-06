@@ -100,7 +100,9 @@
 
     @include('_partials.update')
 
+    @if ($page->timetable === 'yes')
     @include('_partials.timetable', ['width' => 'w-1/2'])
+    @endif
 
     @yield('content')   
   </div>
